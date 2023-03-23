@@ -39,21 +39,3 @@ spec:
     secretRef:
       name: gitea
 
----
-
-apiVersion: config.porch.kpt.dev/v1alpha1
-kind: Repository
-
-metadata:
-  name: external-blueprints
-  namespace: porch-demo
-
-spec:
-  description: External blueprints
-  content: Package
-  deployment: false
-  type: git
-  git:
-    repo: https://github.com/nephio-project/free5gc-packages.git
-    directory: /
-    branch: main
